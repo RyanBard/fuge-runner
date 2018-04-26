@@ -184,7 +184,7 @@ test('process kill test', function (t) {
       t.equal(null, err)
       t.notEqual(undefined, child.pid)
       setTimeout(function () {
-        process.kill(child.pid, 'SIGKILL')
+        process.kill(child.pid, 'SIGKILL') // TODO
         runner.stop(system.topology.containers.runme, child.pid, function (err) {
           t.equal(null, err)
         })
